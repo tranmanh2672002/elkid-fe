@@ -1,0 +1,70 @@
+.level__wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+.level__container {
+    margin: auto;
+    width: 70%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.level__nav {
+    margin: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.level__header {
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.level__content {
+    max-height: 60vh;
+}
+
+.level__course {
+    margin: auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    background-color: red;
+    align-items: center;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    background-image: linear-gradient(to right, #da22ff 0%, #9733ee 51%, #da22ff 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #eee;
+    &:hover {
+        opacity: 0.7;
+        background-position: right center; /* change the direction of the change here */
+    }
+}
+
+.level__course--content {
+    flex: 1;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.level__course--header {
+    display: block;
+    font-size: 1.4rem;
+}
+
+.level__course--description {
+    display: block;
+    font-size: 1rem;
+}
+
+.level__back-btn {
+    display: flex;
+    justify-content: space-between;
+}

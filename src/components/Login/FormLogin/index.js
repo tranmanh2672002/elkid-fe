@@ -1,5 +1,5 @@
 import './FormLogin.scss';
-import { Button, Typography, IconButton } from '@mui/material';
+import { Button, Typography, IconButton, Box, CircularProgress } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import HomeIcon from '@mui/icons-material/Home';
 
@@ -13,12 +13,15 @@ function FormLogin() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
 
     const navigate = useNavigate();
 
     const handleSubmit = async () => {
         try {
+            setLoading(true);
             const res = await axios.post(`${baseURL}/user/login`, { username, password });
+            setLoading(false);
             if (res.data.login) {
                 setUsername('');
                 setPassword('');
@@ -105,6 +108,13 @@ function FormLogin() {
                     >
                         Đăng nhập
                     </Button>
+                    {loading ? (
+                        <Box sx={{ marginTop: '40px' ,display: 'flex' , justifyContent: 'center'}}>
+                            <CircularProgress />
+                        </Box>
+                    ) : (
+                        <></>
+                    )}
                 </ValidatorForm>
             </div>
 

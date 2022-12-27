@@ -1,7 +1,7 @@
 import './FormRegister.scss';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Button, Typography, IconButton } from '@mui/material';
+import { Button, Typography, IconButton, Box, CircularProgress } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import HomeIcon from '@mui/icons-material/Home';
 
@@ -14,6 +14,7 @@ function FormRegister() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [passwordX2, setPasswordX2] = useState('');
+    const [loading, setLoading] = useState(false);
 
     const navigate = useNavigate();
 
@@ -27,12 +28,14 @@ function FormRegister() {
     });
 
     const handleSubmit = async () => {
+        setLoading(true);
         try {
             const res = await axios.post(`${baseURL}/user/register`, {
                 name,
                 username,
                 password,
             });
+            setLoading(false);
             if (res.data.register) {
                 navigate('/login');
             }
@@ -125,9 +128,17 @@ function FormRegister() {
                     >
                         Đăng ký
                     </Button>
+
                     <Link className="register__btn-login " to="/login">
                         Bạn đã có tài khoản? - Đăng nhập
                     </Link>
+                    {loading ? (
+                        <Box sx={{ marginTop: '40px', display: 'flex', justifyContent: 'center' }}>
+                            <CircularProgress />
+                        </Box>
+                    ) : (
+                        <></>
+                    )}
                 </ValidatorForm>
             </div>
 

@@ -3,7 +3,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 // import HomeIcon from '@mui/icons-material/Home';
 import ModalIntroImage from '~/assets/images/modalIntro.jpg';
 
-import { Button, IconButton, Typography } from '@mui/material';
+import { Button, Grid, IconButton, Skeleton, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
@@ -90,7 +90,32 @@ function LearnImg() {
                                 );
                             })
                         ) : (
-                            <h2>Not found</h2>
+                            <Grid container spacing={4}>
+                                <Grid item xs={3}>
+                                    <Skeleton variant="rounded" width={'100%'} height={140} />
+                                </Grid>
+                                <Grid item xs={3}>
+                                    <Skeleton variant="rounded" width={'100%'} height={140} />
+                                </Grid>
+                                <Grid item xs={3}>
+                                    <Skeleton variant="rounded" width={'100%'} height={140} />
+                                </Grid>
+                                <Grid item xs={3}>
+                                    <Skeleton variant="rounded" width={'100%'} height={140} />
+                                </Grid>
+                                <Grid item xs={3}>
+                                    <Skeleton variant="rounded" width={'100%'} height={140} />
+                                </Grid>
+                                <Grid item xs={3}>
+                                    <Skeleton variant="rounded" width={'100%'} height={140} />
+                                </Grid>
+                                <Grid item xs={3}>
+                                    <Skeleton variant="rounded" width={'100%'} height={140} />
+                                </Grid>
+                                <Grid item xs={3}>
+                                    <Skeleton variant="rounded" width={'100%'} height={140} />
+                                </Grid>
+                            </Grid>
                         )}
                     </div>
                 </div>

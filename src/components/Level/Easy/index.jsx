@@ -5,7 +5,7 @@ import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 import CheckIcon from '@mui/icons-material/Check';
 import CloseIcon from '@mui/icons-material/Close';
 
-import { Button, IconButton } from '@mui/material';
+import { Button, Grid, IconButton, Skeleton } from '@mui/material';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -354,7 +354,20 @@ function EasyLevel() {
                         </Modal>
                     </>
                 ) : (
-                    <h2>No question</h2>
+                    <Grid container spacing={4}>
+                        <Grid item xs={3}>
+                            <Skeleton variant="rounded" width={'100%'} height={140} />
+                        </Grid>
+                        <Grid item xs={3}>
+                            <Skeleton variant="rounded" width={'100%'} height={140} />
+                        </Grid>
+                        <Grid item xs={3}>
+                            <Skeleton variant="rounded" width={'100%'} height={140} />
+                        </Grid>
+                        <Grid item xs={3}>
+                            <Skeleton variant="rounded" width={'100%'} height={140} />
+                        </Grid>
+                    </Grid>
                 )}
             </div>
         </div>

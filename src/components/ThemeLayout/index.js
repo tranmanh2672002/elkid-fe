@@ -1,6 +1,6 @@
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import HomeIcon from '@mui/icons-material/Home';
-import { IconButton } from '@mui/material';
+import { Grid, IconButton, Skeleton } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 import './ThemeLayout.scss';
@@ -60,7 +60,26 @@ function ThemeLayout() {
                                 );
                             })
                         ) : (
-                            <h2>no course</h2>
+                            <Grid container spacing={4}>
+                                <Grid item xs={6}>
+                                    <Skeleton variant="rounded" width={'100%'} height={80} />
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <Skeleton variant="rounded" width={'100%'} height={80} />
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <Skeleton variant="rounded" width={'100%'} height={80} />
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <Skeleton variant="rounded" width={'100%'} height={80} />
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <Skeleton variant="rounded" width={'100%'} height={80} />
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <Skeleton variant="rounded" width={'100%'} height={80} />
+                                </Grid>
+                            </Grid>
                         )}
                     </div>
                 </div>

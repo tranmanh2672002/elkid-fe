@@ -4,10 +4,9 @@
 }
 
 .Theme__container {
-    // max-width: 800px;
     width: 80%;
+    height: 80%;
     margin: auto;
-    // background-color: rgb(233, 245, 250);
     padding: 20px;
     border-radius: 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -36,7 +35,8 @@
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 20px;
-    max-height: 60vh;
+    max-height: 64vh;
+    overflow-y: scroll;
 }
 
 .Theme__course {
@@ -81,4 +81,69 @@
 .Theme__course--description {
     display: block;
     font-size: 1rem;
+}
+
+@media screen and (max-width: 900px) {
+    .Theme__course {
+        .Theme__course--header {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        .Theme__course--description {
+            font-size: 1rem;
+
+        }
+    }
+}
+
+@media screen and (max-width: 770px) {
+
+    .Theme__wrapper {
+        overflow-y: hidden;
+    }
+    .Theme__container {
+        width: 90%;
+        height: 90%;
+        padding: 20px;
+    }
+
+    .Theme__course {
+        width: 100%;
+        margin: 10px 0;
+        padding: 0;
+        .Theme__course--header {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        .Theme__course--description {
+            font-size: 1rem;
+
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .Theme__wrapper {
+        overflow-y: hidden;
+    }
+    .Theme__container {
+        width: 90%;
+        height: 90%;
+        padding: 20px;
+    }
+
+    .Theme__course {
+        width: 100%;
+        margin: 10px 0;
+        padding: 0;
+        .Theme__course--header {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .Theme__course--description {
+            font-size: 0.8rem;
+
+        }
+    }
 }

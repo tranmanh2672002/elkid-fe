@@ -1,6 +1,7 @@
 .LearnImg__wrapper {
     height: 100vh;
     display: flex;
+    overflow: hidden;
 }
 
 .LearnImg__container {
@@ -10,7 +11,7 @@
     border-radius: 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     background-color: #ffffff;
-
+    overflow: hidden;
 }
 
 .LearnImg__nav {
@@ -20,7 +21,7 @@
 }
 
 .LearnImg__content {
-    height: 70vh;
+    height: 64vh;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -54,5 +55,30 @@
             -o-transform: scale(1.1);
             -ms-transform: scale(1.1);
         }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .header {
+        font-size: 2.2rem !important;
+    }
+    .LearnImg__container {
+        width: 90%;
+        height: 90vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        font-size: 1.8rem !important;
+    }
+    .LearnImg__container {
+        width: 90%;
+    }
+    .LearnImg__item {
+        width: 50%;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 28px;
     }
 }

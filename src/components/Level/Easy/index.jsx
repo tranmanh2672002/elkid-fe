@@ -151,20 +151,17 @@ function EasyLevel() {
                     aria-describedby="keep-mounted-modal-description"
                 >
                     <Box sx={styleModalIntro}>
-                        <input type="image" src={ModalIntroImage} style={{ width: '300px' }} alt="image" />
-                        <Box>
-                            <IconButton
-                                sx={{ backgroundColor: '#fff', color: '#000', border: '1px solid #ccc' }}
-                                aria-label="volume"
-                                color="info"
-                                size="large"
-                            >
-                                <VolumeUpIcon />
-                            </IconButton>
+                        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                             <Typography sx={{ mt: 2, mb: 2, color: '#000' }} variant="h5">
                                 Nhấn vào biểu tương cái loa để nghe
                             </Typography>
-                            <Button onClick={() => setOpenModalIntro(false)} variant="contained" color="secondary">
+                            <input type="image" src={ModalIntroImage} style={{ width: '300px' }} alt="image" />
+                            <Button
+                                sx={{ margin: 'auto' }}
+                                onClick={() => setOpenModalIntro(false)}
+                                variant="contained"
+                                color="secondary"
+                            >
                                 Đồng ý
                             </Button>
                         </Box>

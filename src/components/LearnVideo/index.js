@@ -44,7 +44,7 @@ function LearnVd() {
                     {course.map((item) => {
                         return (
                             <>
-                                <div className="LearnVd__title">{item.name}</div>
+                                <div className="LearnVd__title header">{item.name}</div>
                                 <div className="LearnVd__content">
                                     <iframe
                                         key={item._id}

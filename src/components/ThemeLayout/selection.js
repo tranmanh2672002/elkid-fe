@@ -24,7 +24,7 @@ function SelectionLearn() {
                             </IconButton>
                         </Link>
                     </div>
-                    <div className="Selection__header">Chọn hình thức học</div>
+                    <div className="Selection__header">Chọn hình thức học tập</div>
                     <div className="Selection__courses">
                         <Link to={`/app/selection/learnImages/${id}`} className="Selection__course">
                             <div className="Selection__course--content">
@@ -32,7 +32,7 @@ function SelectionLearn() {
                                     <ImageIcon className='Selection__course--icon'/>
                                     Hình ảnh
                                 </span>
-                                <span className="Selection__course--description">Những hình ảnh minh họa chủ đề</span>
+                                <span className="Selection__course--description">Hình ảnh minh họa chủ đề</span>
                             </div>
                         </Link>
 
@@ -42,7 +42,7 @@ function SelectionLearn() {
                                     <OndemandVideoIcon className='Selection__course--icon'/>
                                     Video
                                 </span>
-                                <span className="Selection__course--description">Những video minh họa chủ đề</span>
+                                <span className="Selection__course--description">Video minh họa chủ đề</span>
                             </div>
                         </Link>
                     </div>

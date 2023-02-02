@@ -24,6 +24,7 @@ const styleModalIntro = {
     p: 4,
     zIndex: 100,
     display: 'flex',
+    flexDirection: 'column',
     alignItems: 'center',
     outline: 'none',
 };
@@ -69,7 +70,13 @@ function LearnImg() {
                         </Link> */}
                     </div>
                     <Typography
-                        sx={{ color: 'var(--primary-color)', textAlign: 'center', fontWeight: '500' }}
+                        className="header"
+                        sx={{
+                            color: 'var(--primary-color)',
+                            textAlign: 'center',
+                            fontWeight: '500',
+                            marginBottom: '10px',
+                        }}
                         variant="h4"
                     >
                         {course}
@@ -127,12 +134,17 @@ function LearnImg() {
                 aria-describedby="keep-mounted-modal-description"
             >
                 <Box sx={styleModalIntro}>
-                    <input type="image" src={ModalIntroImage} style={{ width: '300px' }} alt="image" />
-                    <Box>
+                    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                         <Typography sx={{ mt: 2, mb: 2, color: '#000' }} variant="h5">
                             Nhấn vào hình ảnh để nghe
                         </Typography>
-                        <Button onClick={() => setOpenModalIntro(false)} variant="contained" color="secondary">
+                        <input type="image" src={ModalIntroImage} style={{ width: '300px' }} alt="image" />
+                        <Button
+                            sx={{ margin: 'auto' }}
+                            onClick={() => setOpenModalIntro(false)}
+                            variant="contained"
+                            color="secondary"
+                        >
                             Đồng ý
                         </Button>
                     </Box>

@@ -63,7 +63,7 @@ function Ranking() {
                     <div className="Ranking__main">
                         <div className="Ranking__list">
                             {users.map((user, index) => {
-                                if (index > 4) return;
+                                if (index > 4) return null;
                                 return (
                                     <div key={user._id} className="Ranking__list-main">
                                         <div className="Ranking__list-order">{index + 1}</div>

@@ -5,7 +5,8 @@
 
 .level__container {
     margin: auto;
-    width: 70%;
+    width: 80%;
+    height: 80%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 10px;
     background-color: #ffffff;
@@ -67,4 +68,20 @@
 .level__back-btn {
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 770px) {
+
+    .level__course {
+        width: 80%;
+    }
+    .level__course--content {
+        padding: 10px;
+        .level__course--header {
+            font-size: 1.2rem;
+        }
+        .level__course--description {
+            font-size: 0.9rem;
+        }
+    }
 }

@@ -23,6 +23,7 @@
     font-weight: 500;
     color: var(--primary-color);
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .LearnVd__content {
@@ -35,4 +36,30 @@
     width: 80%;
     height: 65vh;
     border: none;
+}
+
+@media screen and (max-width: 900px) {
+    .header {
+        font-size: 2.2rem !important;
+    }
+    .LearnVd__container {
+        width: 90%;;
+    }
+    .LearnVd__content--video {
+        height: 50vh;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        font-size: 1.8rem !important;
+    }
+    .LearnVd__container {
+        width: 90%;;
+    }
+    .LearnVd__content--video {
+        height: 50vh;
+        width: 96%;
+    }
 }

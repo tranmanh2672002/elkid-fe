@@ -46,10 +46,10 @@ export default function Main() {
                     >
                         Tại sao bạn nên học cùng EnglishKids
                     </Typography>
-                    <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }}>
+                    <Stack direction={{ xs: 'column', md: 'row', sm: 'column' }} spacing={{ xs: 1, sm: 2, md: 4 }}>
                         <Item>
                             <Box sx={{ textAlign: 'left' }}>
-                                <Box display="flex">
+                                <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                     <img src={effective} className="icon" alt="effective"></img>
                                     <Box>
                                         <Typography variant="h6"> Thực sự hiệu quả </Typography>
@@ -59,7 +59,7 @@ export default function Main() {
                                         </Typography>
                                     </Box>
                                 </Box>
-                                <Box display="flex">
+                                <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                     <img src={tick} className="icon" alt="tick"></img>
                                     <Box>
                                         <Typography variant="h6">Cá nhân hóa trải nghiệm học tập </Typography>
@@ -81,7 +81,7 @@ export default function Main() {
                         </Item>
                         <Item>
                             <Box sx={{ textAlign: 'left' }}>
-                                <Box display="flex">
+                                <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                     <img src={motivation} className="icon" alt="motivation"></img>
                                     <Box>
                                         <Typography variant="h6">Truyền động lực học</Typography>
@@ -93,7 +93,7 @@ export default function Main() {
                                     </Box>
                                 </Box>
 
-                                <Box display="flex">
+                                <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                     <img src={fun} className="icon" alt="fun"></img>
                                     <Box>
                                         <Typography variant="h6">Học thật vui!</Typography>
@@ -111,7 +111,7 @@ export default function Main() {
                     <Box borderTop={1} {...defaultProps} />
                     <Box sx={{ flexGrow: 1 }}>
                         <Grid container spacing={2}>
-                            <Grid item xs={4}>
+                            <Grid item sm={5} xs={12}>
                                 <Item>
                                     {' '}
                                     <center>
@@ -119,7 +119,7 @@ export default function Main() {
                                     </center>
                                 </Item>
                             </Grid>
-                            <Grid item xs={8}>
+                            <Grid item sm={7} xs={12}>
                                 <Item>
                                     <Box sx={{ textAlign: 'left' }}>
                                         <Typography variant="h5">English là ngôn ngữ hàng đầu thế giới </Typography>
@@ -139,7 +139,7 @@ export default function Main() {
                     <Box borderTop={1} {...defaultProps} />
                     <Box sx={{ flexGrow: 1 }}>
                         <Grid container spacing={2}>
-                            <Grid item xs={8}>
+                            <Grid item sm={7} xs={12}>
                                 <Item>
                                     <Box sx={{ textAlign: 'left' }}>
                                         <Typography variant="h5">Tăng tốc học tập cùng Super EnglishKids</Typography>
@@ -151,7 +151,7 @@ export default function Main() {
                                     </Box>
                                 </Item>
                             </Grid>
-                            <Grid item xs={4}>
+                            <Grid item sm={5} xs={12}>
                                 <Item>
                                     {' '}
                                     <center>
@@ -166,7 +166,7 @@ export default function Main() {
                     <Box borderTop={1} {...defaultProps} />
                     <Box sx={{ flexGrow: 1 }}>
                         <Grid container spacing={2}>
-                            <Grid item xs={4}>
+                            <Grid item sm={5} xs={12} >
                                 <Item>
                                     {' '}
                                     <center>
@@ -174,7 +174,7 @@ export default function Main() {
                                     </center>
                                 </Item>
                             </Grid>
-                            <Grid item xs={8}>
+                            <Grid item sm={7} xs={12}>
                                 <Item>
                                     <Box sx={{ textAlign: 'left' }}>
                                         <Typography variant="h5">Các khóa học thực sự hiệu quả </Typography>
@@ -189,8 +189,7 @@ export default function Main() {
                     </Box>
                     {/* sfsf */}
                 </Box>
-
             </Box>
-        </div >
+        </div>
     );
 }

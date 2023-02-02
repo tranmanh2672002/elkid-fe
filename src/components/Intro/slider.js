@@ -40,7 +40,7 @@ export default class slider extends Component {
         };
         return (
             <Box id="slider" >
-                <Slider ref={(c) => (this.slider = c)} {...settings} >
+                <Slider className='slider-wrapper' ref={(c) => (this.slider = c)} {...settings} >
                     <Box key={1} >
                         <Box className='slider-box'>
                             <Box className="wrapper-img" >
@@ -49,7 +49,7 @@ export default class slider extends Component {
                                 </center>
                             </Box>
                             <Box className="wrapper-text" >
-                                <Typography variant="h3">Chào mừng đến với EngLishKids</Typography>
+                                <Typography className='wrapper-text-header' variant="h3">Chào mừng đến với EngLishKids</Typography>
                                 <Typography
                                     variant="p"
                                     className="text-p"
@@ -75,6 +75,7 @@ export default class slider extends Component {
                             <Box className="wrapper-text" >
                                 <Typography
                                     variant="h3"
+                                    className='wrapper-text-header'
                                     sx={{
                                         color: 'green',
                                     }}
@@ -94,7 +95,7 @@ export default class slider extends Component {
                                 <img src={communication} alt="communication" />
                             </Box>
                             <Box className="wrapper-text" >
-                                <Typography variant="h3" sx={{ color: 'red', fontWeight: 'bold', textAlign: 'center' }}>
+                                <Typography className='wrapper-text-header' variant="h3" sx={{ color: 'red', fontWeight: 'bold', textAlign: 'center' }}>
                                     Phương pháp học tập hiệu quả cho trẻ
                                 </Typography>
                                 <Typography variant="p" className="text-p">
@@ -107,10 +108,10 @@ export default class slider extends Component {
 
                 </Slider>
                 <Stack spacing={2} direction="row" className="prev-next">
-                    <Box variant="outlined" onClick={this.previous} className="prev">
+                    <Box variant="outlined" onClick={this.previous} className="prev display-none">
                         <ArrowBackIosNewIcon />
                     </Box>
-                    <Box variant="outlined" href="#contained-buttons" onClick={this.next} className="next">
+                    <Box variant="outlined" href="#contained-buttons" onClick={this.next} className="next display-none">
                         <ArrowForwardIosIcon />
                     </Box>
                 </Stack>
